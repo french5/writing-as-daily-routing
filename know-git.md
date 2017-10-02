@@ -50,5 +50,19 @@ visual studio code官网下载。这个编译工具非常好用，
 * 而且界面中view-intergreted terminal可以进行终端操作。
 * 可以直接把你的工作文件拉进来，增减文件，非常方便。
 * 使用方法，先保存是什么格式，然后输入内容。有了格式它才配给你需要的功能。
+# 回顾如何使用git和常用的git指令
+* install git and vsc //安装git和visual studio code
+* cd xxx //进入一级文件夹cd ~回到默认位置，pwd查看自己的位置，cd ..回到上一级文件夹，cd ..进入下一级文件夹，cd ../..表示下一级文件夹的某个文件。
+* mkdir myproject//创建一个文件夹myproject
+* cd myproject//进入这个myproject文件夹
+* git init//初始化一般适用于windows操作系统，mac不需要
+* git clone https://github.com/peterwufan/compositions.git//把自己的远程仓库下载到本地
+* git status//查看状态
+* git add file1 file2//添加很多文件
+* git commit -m"content whatever"//提交到缓存，说明提交缘由
+* git push//推送到自己的远程仓库
+* input :user.name "peterwufan"//第一次需要输入用户名
+* input :code//和密码，密码不显示。
 
+时光机穿梭
 # 编程的基本功之一就是阅读技术文档的只字不差的能力很多文献你边读边练，就可以做出来个东西，比如我按照MDN从最开始的入门一步步又在github上建立了一个属于自己的网页https://french5.github.io/my-website/
