@@ -1,5 +1,5 @@
 # 初步了解github和git
-
+Git is a distributed version control system.Git is free software.
 github是一个网络社群，里面有开源的很多代码、项目供使用者使用。
 注册号github账号以后，在自己的git终端里可以写代码运行github页面的内容。
 而git的作用就是摆脱了必须在窗口界面用鼠标操作的麻烦，直接可以运行命令达到高效工作的作用。
@@ -23,7 +23,7 @@ Explore是探索更多github用法。
 如果你已经有了github账户可以建立一个项目仓库了。
 * 点击New repository 然后出现要填写的Repository name，输入一个你要的英文仓库名
 * Description是可选的，来描述你要建立的原因和目的。下面的Public公开选上，因为private是要付费的。
-* Initialize this repository with a README.这是github让你养成一个习惯，把自己的文档以最简洁的方式让阅读者很快了解大概内容的习惯。
+* Initialize this repository with a README.这是github让你养成一个习惯，把自己的文档以最简洁的方式让阅读者很快了解大概内容的习惯，就是建立这个README.md文件。
 * 下面的选项Add.gitignore意识是忽略一些文件，建立忽略的规则。细节可以google一下。Add a license是法律声明可以省略。
 * 最后点击create repository就可以了。
 * 创建后，你的文库里只有一个README.md文件，要实现与git交互，只要copy这个空文库的url后，
@@ -49,7 +49,7 @@ visual studio code官网下载。这个编译工具非常好用，
 * 可以编辑md，json，js，html，等等扩展格式的文件。
 * 而且界面中view-intergreted terminal可以进行终端操作。
 * 可以直接把你的工作文件拉进来，增减文件，非常方便。
-* 使用方法，先保存是什么格式，然后输入内容。有了格式它才配给你需要的功能。
+* 使用方法，先保存是什么格式，然后输入内容。有了格式它才配给你需要的功能。cmd+delete删除快捷键
 # 回顾如何使用git和常用的git指令
 * install git and vsc //安装git和visual studio code
 * cd xxx //进入一级文件夹cd ~回到默认位置，pwd查看自己的位置，cd ..回到上一级文件夹，cd ..进入下一级文件夹，cd ../..表示下一级文件夹的某个文件。
@@ -66,3 +66,46 @@ visual studio code官网下载。这个编译工具非常好用，
 
 时光机穿梭
 # 编程的基本功之一就是阅读技术文档的只字不差的能力很多文献你边读边练，就可以做出来个东西，比如我按照MDN从最开始的入门一步步又在github上建立了一个属于自己的网页https://french5.github.io/my-website/
+举几个例子来说明阅读提示的重要性：
+现在，运行git status命令看看结果：
+
+$ git status
+# On branch master//在主分支上
+# Changes not staged for commit://改变的部分还处在缓存区准备提交
+#   (use "git add <file>..." to update what will be committed)//更新所提交的信息，使用git add 文件1 文件2（中间有空格，一般你打出第一个字母，按tab键回补全后面，如果没出现说明有两个同样字母的文件，所以接着打到不一样的字母就可以实现tab补全）
+#   (use "git checkout -- <file>..." to discard changes in working directory)//在工作区放弃修改的内容，和远程保持一致。工作区-缓存区-远程，这样一个过程，操作的两步，-git add和-git commit
+#
+#    modified:   readme.txt//告诉你已经发生的改变。
+
+如上的操作git status以后出现的说明，要仔细认真看懂，这样就知道努力的方向了。
+//后面是注释
+
+认真阅读 git --help也可以帮助我们了解那些常用的git命令。
+
+$ git diff readme.txt 
+# diff --git a/readme.txt b/readme.txt
+# index 46d49bf..9247db6 100644
+# --- a/readme.md
+# +++ b/readme.md
+git diff顾名思义就是查看difference，知道了对readme.txt作了什么修改后，再把它提交到仓库就放心多了，提交修改和提交新文件是一样的两步，第一步是git add：
+$ git add readme.md
+同样没有任何输出。在执行第二步git commit之前，我们再运行git status看看当前仓库的状态：
+
+$ git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#       modified:   readme.md
+
+git status告诉我们，将要被提交的修改包括readme.md，下一步，就可以放心地提交了：
+
+$ git commit -m "add distributed"
+# [master ea34578] add distributed
+# 1 file changed, 1 insertion(+), 1 deletion(-)
+提交后，我们再用git status命令看看仓库的当前状态：
+
+$ git status
+# On branch master
+# nothing to commit (working directory clean)
+Git告诉我们当前没有需要提交的修改，而且，工作目录是干净（working directory clean）的。
