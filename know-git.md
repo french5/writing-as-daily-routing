@@ -70,12 +70,11 @@ visual studio code官网下载。这个编译工具非常好用，
 现在，运行git status命令看看结果：
 
 $ git status
-# On branch master//在主分支上
-# Changes not staged for commit://改变的部分还处在缓存区准备提交
-#   (use "git add <file>..." to update what will be committed)//更新所提交的信息，使用git add 文件1 文件2（中间有空格，一般你打出第一个字母，按tab键回补全后面，如果没出现说明有两个同样字母的文件，所以接着打到不一样的字母就可以实现tab补全）
-#   (use "git checkout -- <file>..." to discard changes in working directory)//在工作区放弃修改的内容，和远程保持一致。工作区-缓存区-远程，这样一个过程，操作的两步，-git add和-git commit
-#
-#    modified:   readme.txt//告诉你已经发生的改变。
+* On branch master//在主分支上
+* Changes not staged for commit://改变的部分还处在缓存区准备提交
+* (use "git add <file>..." to update what will be committed)//更新所提交的信息，使用git add 文件1 文件2（中间有空格，一般你打出第一个字母，按tab键回补全后面，如果没出现说明有两个同样字母的文件，所以接着打到不一样的字母就可以实现tab补全）
+*   (use "git checkout -- <file>..." to discard changes in working directory)//在工作区放弃修改的内容，和远程保持一致。工作区-缓存区-远程，这样一个过程，操作的两步，-git add和-git commit
+*    modified:   readme.txt//告诉你已经发生的改变。
 
 如上的操作git status以后出现的说明，要仔细认真看懂，这样就知道努力的方向了。
 //后面是注释
@@ -83,29 +82,29 @@ $ git status
 认真阅读 git --help也可以帮助我们了解那些常用的git命令。
 
 $ git diff readme.txt 
-# diff --git a/readme.txt b/readme.txt
-# index 46d49bf..9247db6 100644
-# --- a/readme.md
-# +++ b/readme.md
+* diff --git a/readme.txt b/readme.txt
+* index 46d49bf..9247db6 100644
+* --- a/readme.md
+* +++ b/readme.md
 git diff顾名思义就是查看difference，知道了对readme.txt作了什么修改后，再把它提交到仓库就放心多了，提交修改和提交新文件是一样的两步，第一步是git add：
 $ git add readme.md
 同样没有任何输出。在执行第二步git commit之前，我们再运行git status看看当前仓库的状态：
 
 $ git status
-# On branch master
-# Changes to be committed:
-#   (use "git reset HEAD <file>..." to unstage)
-#
-#       modified:   readme.md
+* On branch master
+* Changes to be committed:
+*  (use "git reset HEAD <file>..." to unstage)
+
+*      modified:   readme.md
 
 git status告诉我们，将要被提交的修改包括readme.md，下一步，就可以放心地提交了：
 
 $ git commit -m "add distributed"
-# [master ea34578] add distributed
-# 1 file changed, 1 insertion(+), 1 deletion(-)
+* [master ea34578] add distributed
+* 1 file changed, 1 insertion(+), 1 deletion(-)
 提交后，我们再用git status命令看看仓库的当前状态：
 
 $ git status
-# On branch master
-# nothing to commit (working directory clean)
+* On branch master
+* nothing to commit (working directory clean)
 Git告诉我们当前没有需要提交的修改，而且，工作目录是干净（working directory clean）的。
