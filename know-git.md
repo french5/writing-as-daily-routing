@@ -42,7 +42,28 @@ mkdir xxxx
 我想翻译psychology-of-the-stock-market，今天我翻译了3段，分别是41，43，45三处。你可以fork我的项目writing-as-daily-routine。这里会用到pull request，简称pr。
 需要说明的是，fork别人的项目后，在你的远程仓库就会多了一个与别人一样名字的项目，并且会有分叉的一个标志。
 然后你在用*建立一个项目仓库*的知识去git clone url到你的本地电脑中，完成你的翻译以后，git commit -m"提交信息"和git push到你的远程仓库，最后只要create pull request就可以了。
-
+##fork的具体步骤
+* 进入到要fork的主项目中比如要翻译股票心理学那个项目，进入到我那个项目的主页点击fork。![](https://ws3.sinaimg.cn/large/006tKfTcly1fkzep93wcjj30vn01e3yt.jpg)
+* 第二步点击clone复制地址![](https://ws3.sinaimg.cn/large/006tKfTcly1fkzequedcbj30e806wwfc.jpg)
+* 第三步进入你选择的文件根目录，git clone [这里是你复制的那个地址]。这样就算是把对方的项目完整fork下来了。
+## 如果这个项目需要协同完成，比如说我翻译前半章，你翻译后半章，那怎么办呢？
+我翻译的时候我的项目会更新，所以你要先同步更新我的项目。
+更新主页方法：
+* （第一次使用要，添加主项目仓库，并命名为 upstream，方便以后再次调用，以后就不用这一步了直接后面三步。
+> git remote add upstream 
+https://github.com/french5/psychology-of-the-market-translation.git）以后就直接下面步骤
+* git fetch upstream master
+* git merge upstream/master
+* git push
+## 如果你也翻译完部分需要提交给我（主项目仓库）怎么做呢？
+cd进入到根目录：
+* git add -A(文件)
+* git status
+* git commit -m"写提交信息"
+* git push 
+向主项目发起pull request![](https://ws3.sinaimg.cn/large/006tKfTcly1fkzfd3zzrhj30bj01s74c.jpg)点击以后按照提示继续creat pull request。我这边会收到你的pr（pull request）在确认没有修改我的内容的前提下，我会merge合并。
+* 需要注意的是，一般要先更新主页再修改，这样不会产生冲突。![](https://ws3.sinaimg.cn/large/006tKfTcly1fkzfi56w6lj30kf0anwhi.jpg)这个图示意了整个流程。
+左边是你自己的项目去clone和push，右边是你fork别人的项目需要先fork然后clone，然后push到自己fork来的项目，然后pull request给主项目。
 # 建议使用的编译工具
 
 visual studio code官网下载。这个编译工具非常好用，
