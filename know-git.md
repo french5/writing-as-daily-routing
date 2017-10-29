@@ -51,7 +51,7 @@ mkdir xxxx
 更新主页方法：
 * （第一次使用要，添加主项目仓库，并命名为 upstream，方便以后再次调用，以后就不用这一步了直接后面三步。
 > git remote add upstream 
-https://github.com/french5/psychology-of-the-market-translation.git）以后就直接下面步骤
+https://github.com/french5/psychology-of-the-market-translation.git以后就直接下面步骤
 * git fetch upstream master
 * git merge upstream/master
 * git push
