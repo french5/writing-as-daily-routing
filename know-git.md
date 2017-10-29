@@ -61,7 +61,7 @@ cd进入到根目录：
 * git status
 * git commit -m"写提交信息"
 * git push 
-向主项目发起pull request![](https://ws3.sinaimg.cn/large/006tKfTcly1fkzfd3zzrhj30bj01s74c.jpg)点击以后按照提示继续creat pull request。我这边会收到你的pr（pull request）在确认没有修改我的内容的前提下，我会merge合并。
+向主项目发起pull request!![](https://ws4.sinaimg.cn/large/006tKfTcly1fkzfnu2688j30du01dglp.jpg)点击以后按照提示继续creat pull request。我这边会收到你的pr（pull request）在确认没有修改我的内容的前提下，我会merge合并。
 * 需要注意的是，一般要先更新主页再修改，这样不会产生冲突。![](https://ws3.sinaimg.cn/large/006tKfTcly1fkzfi56w6lj30kf0anwhi.jpg)这个图示意了整个流程。
 左边是你自己的项目去clone和push，右边是你fork别人的项目需要先fork然后clone，然后push到自己fork来的项目，然后pull request给主项目。
 # 建议使用的编译工具
