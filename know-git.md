@@ -49,7 +49,7 @@ mkdir xxxx
 ## 如果这个项目需要协同完成，比如说我翻译前半章，你翻译后半章，那怎么办呢？
 我翻译的时候我的项目会更新，所以你要先同步更新我的项目。
 更新主页方法：
-* （第一次使用要，添加主项目仓库，并命名为 upstream，方便以后再次调用，以后就不用这一步了直接后面三步。
+* 第一次使用要，添加主项目仓库，并命名为 upstream，方便以后再次调用，以后就不用这一步了直接后面三步。
 > git remote add upstream 
 https://github.com/french5/psychology-of-the-market-translation.git 以后就直接下面步骤
 * git fetch upstream master
